@@ -2,24 +2,24 @@
 
 ## [0.4.14] - 2024-03-25
 ### Improved
-- [#356](https://github.com/tecosaur/LaTeX-Utilities/issues/356) Allow setting more language for live reformat
+- [#356](https://github.com/tpill90/LaTeX-Utilities/issues/356) Allow setting more language for live reformat
 
 ## [0.4.13] - 2024-02-13
 ### Fixed
-- [#397](https://github.com/tecosaur/LaTeX-Utilities/issues/397) Fix configuration name
+- [#397](https://github.com/tpill90/LaTeX-Utilities/issues/397) Fix configuration name
 
 
 ## [0.4.12] - 2024-02-11
 ### Fixed
-- [#387](https://github.com/tecosaur/LaTeX-Utilities/issues/387) Add support for R Sweave and Julia Sweave Dcouemnts
-- [#389](https://github.com/tecosaur/LaTeX-Utilities/issues/389) Fixes typo
-- [#391](https://github.com/tecosaur/LaTeX-Utilities/issues/391) Updated readme to specify how to install texcount
-- [#394](https://github.com/tecosaur/LaTeX-Utilities/issues/394) migrate live snippets template to VSCode's internal config
-- [#396](https://github.com/tecosaur/LaTeX-Utilities/issues/396) support for searching authors when using vscode as zotero search method
+- [#387](https://github.com/tpill90/LaTeX-Utilities/issues/387) Add support for R Sweave and Julia Sweave Dcouemnts
+- [#389](https://github.com/tpill90/LaTeX-Utilities/issues/389) Fixes typo
+- [#391](https://github.com/tpill90/LaTeX-Utilities/issues/391) Updated readme to specify how to install texcount
+- [#394](https://github.com/tpill90/LaTeX-Utilities/issues/394) migrate live snippets template to VSCode's internal config
+- [#396](https://github.com/tpill90/LaTeX-Utilities/issues/396) support for searching authors when using vscode as zotero search method
 
 ## [0.4.11] - 2023-4-3
 ### Fixed
-- [#383](https://github.com/tecosaur/LaTeX-Utilities/issues/383) Fixes an issue that caused formatted pasting can't paste image on linux.
+- [#383](https://github.com/tpill90/LaTeX-Utilities/issues/383) Fixes an issue that caused formatted pasting can't paste image on linux.
 
 ## [0.4.10] - 2023-2-22
 ### Added
@@ -227,23 +227,23 @@ Announce that extension is no longer maintained.
 -   Image Pasting (via `ctrl`+`shift`+`v` and "Paste an Image File")
 -   Live Snippets (auto-activating, with regex)
 
-[unreleased]: https://github.com/tecosaur/latex-utilities/compare/v0.4.6...HEAD
-[0.4.6]: https://github.com/tecosaur/latex-utilities/compare/v0.4.5...v0.4.6
-[0.4.5]: https://github.com/tecosaur/latex-utilities/compare/v0.4.4...v0.4.5
-[0.4.4]: https://github.com/tecosaur/latex-utilities/compare/v0.4.3...v0.4.4
-[0.4.3]: https://github.com/tecosaur/latex-utilities/compare/v0.4.2...v0.4.3
-[0.4.2]: https://github.com/tecosaur/latex-utilities/compare/v0.4.1...v0.4.2
-[0.4.1]: https://github.com/tecosaur/latex-utilities/compare/v0.4.0...v0.4.1
-[0.4.0]: https://github.com/tecosaur/latex-utilities/compare/v0.3.7...v0.4.0
-[0.3.7]: https://github.com/tecosaur/latex-utilities/compare/v0.3.5...v0.3.7
-[0.3.6]: https://github.com/tecosaur/latex-utilities/compare/v0.3.5...v0.3.6
-[0.3.5]: https://github.com/tecosaur/latex-utilities/compare/v0.3.4...v0.3.5
-[0.3.4]: https://github.com/tecosaur/latex-utilities/compare/v0.3.3...v0.3.4
-[0.3.3]: https://github.com/tecosaur/latex-utilities/compare/v0.3.2...v0.3.3
-[0.3.2]: https://github.com/tecosaur/latex-utilities/compare/v0.3.1...v0.3.2
-[0.3.1]: https://github.com/tecosaur/latex-utilities/compare/v0.3.0...v0.3.1
-[0.3.0]: https://github.com/tecosaur/latex-utilities/compare/v0.2.2...v0.3.0
-[0.2.2]: https://github.com/tecosaur/latex-utilities/compare/v0.2.1...v0.2.2
-[0.2.1]: https://github.com/tecosaur/latex-utilities/compare/v0.2.0...v0.2.1
-[0.2.0]: https://github.com/tecosaur/latex-utilities/compare/v0.1.0...v0.2.0
-[0.1.0]: https://github.com/tecosaur/latex-utilities/compare/bc5bf4f...v0.1.0
+[unreleased]: https://github.com/tpill90/latex-utilities/compare/v0.4.6...HEAD
+[0.4.6]: https://github.com/tpill90/latex-utilities/compare/v0.4.5...v0.4.6
+[0.4.5]: https://github.com/tpill90/latex-utilities/compare/v0.4.4...v0.4.5
+[0.4.4]: https://github.com/tpill90/latex-utilities/compare/v0.4.3...v0.4.4
+[0.4.3]: https://github.com/tpill90/latex-utilities/compare/v0.4.2...v0.4.3
+[0.4.2]: https://github.com/tpill90/latex-utilities/compare/v0.4.1...v0.4.2
+[0.4.1]: https://github.com/tpill90/latex-utilities/compare/v0.4.0...v0.4.1
+[0.4.0]: https://github.com/tpill90/latex-utilities/compare/v0.3.7...v0.4.0
+[0.3.7]: https://github.com/tpill90/latex-utilities/compare/v0.3.5...v0.3.7
+[0.3.6]: https://github.com/tpill90/latex-utilities/compare/v0.3.5...v0.3.6
+[0.3.5]: https://github.com/tpill90/latex-utilities/compare/v0.3.4...v0.3.5
+[0.3.4]: https://github.com/tpill90/latex-utilities/compare/v0.3.3...v0.3.4
+[0.3.3]: https://github.com/tpill90/latex-utilities/compare/v0.3.2...v0.3.3
+[0.3.2]: https://github.com/tpill90/latex-utilities/compare/v0.3.1...v0.3.2
+[0.3.1]: https://github.com/tpill90/latex-utilities/compare/v0.3.0...v0.3.1
+[0.3.0]: https://github.com/tpill90/latex-utilities/compare/v0.2.2...v0.3.0
+[0.2.2]: https://github.com/tpill90/latex-utilities/compare/v0.2.1...v0.2.2
+[0.2.1]: https://github.com/tpill90/latex-utilities/compare/v0.2.0...v0.2.1
+[0.2.0]: https://github.com/tpill90/latex-utilities/compare/v0.1.0...v0.2.0
+[0.1.0]: https://github.com/tpill90/latex-utilities/compare/bc5bf4f...v0.1.0

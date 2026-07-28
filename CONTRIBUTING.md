@@ -2,7 +2,7 @@
 
 ## 1. Install
 
-`git clone https://github.com/tecosaur/LaTeX-Utilities.git`,
+`git clone https://github.com/tpill90/LaTeX-Utilities.git`,
 
 ## 2. Initialise
 

@@ -59,7 +59,7 @@ export class CompletionWatcher {
     constructor(extension: Extension) {
         this.extension = extension
         this.typeFinder = new TypeFinder()
-        this.enabled = vscode.workspace.getConfiguration('latex-utilities').get('liveReformat.enabled') as boolean
+        this.enabled = vscode.workspace.getConfiguration('latex-utilities-fork').get('liveReformat.enabled') as boolean
         this.configAge = +new Date()
         vscode.workspace.onDidChangeTextDocument(this.watcher, this)
 
@@ -69,7 +69,7 @@ export class CompletionWatcher {
             this.extension.logger.addLogMessage('User Snippets File Read')
             this.extension.logger.addLogMessage(JSON.stringify(snippets))
             // update config
-            vscode.workspace.getConfiguration('latex-utilities').update('liveReformat.snippets', snippets, true)
+            vscode.workspace.getConfiguration('latex-utilities-fork').update('liveReformat.snippets', snippets, true)
             // remove user snippets file
             removeSync(this.getUserSnippetsFile())
             this.extension.logger.addLogMessage('User Snippets File Migrated')
@@ -108,11 +108,11 @@ export class CompletionWatcher {
 
     public async watcher(e: vscode.TextDocumentChangeEvent) {
         if (+new Date() - this.configAge > this.MAX_CONFIG_AGE) {
-            this.enabled = vscode.workspace.getConfiguration('latex-utilities').get('liveReformat.enabled') as boolean
+            this.enabled = vscode.workspace.getConfiguration('latex-utilities-fork').get('liveReformat.enabled') as boolean
             this.loadSnippets()
             this.configAge = +new Date()
         }
-        const languages = vscode.workspace.getConfiguration('latex-utilities').get('liveReformat.languages') as string[]
+        const languages = vscode.workspace.getConfiguration('latex-utilities-fork').get('liveReformat.languages') as string[]
         if (
             !languages.includes(e.document.languageId) ||
             e.contentChanges.length === 0 ||
@@ -286,7 +286,7 @@ export class CompletionWatcher {
     public editSnippetsFile() {
         vscode.commands.executeCommand('workbench.action.openSettingsJson', {
             revealSetting: {
-                key: 'latex-utilities.liveReformat.snippets',
+                key: 'latex-utilities-fork.liveReformat.snippets',
                 edit: true,
             }
         })
@@ -294,10 +294,10 @@ export class CompletionWatcher {
 
     public loadSnippets() {
         // if this.snippetsConfig is same with getConfiguration, skip
-        if (JSON.stringify(this.snippetsConfig) === JSON.stringify(vscode.workspace.getConfiguration('latex-utilities').get('liveReformat.snippets'))) {
+        if (JSON.stringify(this.snippetsConfig) === JSON.stringify(vscode.workspace.getConfiguration('latex-utilities-fork').get('liveReformat.snippets'))) {
             return
         }
-        this.snippetsConfig = vscode.workspace.getConfiguration('latex-utilities').get('liveReformat.snippets') as ISnippetConfig[]
+        this.snippetsConfig = vscode.workspace.getConfiguration('latex-utilities-fork').get('liveReformat.snippets') as ISnippetConfig[]
         try {
             this.snippets = []
             for (let i = 0; i < this.snippetsConfig.length; i++) {

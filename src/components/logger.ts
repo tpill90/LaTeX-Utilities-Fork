@@ -17,7 +17,7 @@ export class Logger {
     }
 
     showErrorMessage(message: string, ...args: any): Thenable<any> | undefined {
-        const configuration = vscode.workspace.getConfiguration('latex-utilities')
+        const configuration = vscode.workspace.getConfiguration('latex-utilities-fork')
         if (configuration.get('message.error.show')) {
             return vscode.window.showErrorMessage(message, ...args)
         } else {

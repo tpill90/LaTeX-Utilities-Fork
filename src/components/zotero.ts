@@ -12,7 +12,7 @@ export class Zotero {
 
     // Get a citation via the Zotero Cite as you Write popup
     private async caywCite() {
-        const configuration = vscode.workspace.getConfiguration('latex-utilities.zotero')
+        const configuration = vscode.workspace.getConfiguration('latex-utilities-fork.zotero')
 
         const zoteroUrl = configuration.get('zoteroUrl') as string
 
@@ -46,7 +46,7 @@ export class Zotero {
     // Search the Zotero library for entries matching `terms`.
     // Returns a promise for search results and a function to cancel the search
     private search(terms: string): [Promise<SearchResult[]>, () => void] {
-        const configuration = vscode.workspace.getConfiguration('latex-utilities.zotero')
+        const configuration = vscode.workspace.getConfiguration('latex-utilities-fork.zotero')
         const zoteroUrl = configuration.get('zoteroUrl') as string
 
         this.extension.logger.addLogMessage(`Searching Zotero for "${terms}"`)
@@ -156,7 +156,7 @@ export class Zotero {
             })
 
             if (entries && entries.length > 0) {
-                const configuration = vscode.workspace.getConfiguration('latex-utilities.zotero')
+                const configuration = vscode.workspace.getConfiguration('latex-utilities-fork.zotero')
                 const latexCommand = configuration.get('latexCommand') as string
 
                 const keys = entries.map(e => e.citekey).join(',')
@@ -188,7 +188,7 @@ export class Zotero {
     }
 
     async cite() {
-        const configuration = vscode.workspace.getConfiguration('latex-utilities.zotero')
+        const configuration = vscode.workspace.getConfiguration('latex-utilities-fork.zotero')
         const citeMethod = configuration.get('citeMethod')
 
         if (!(await this.checkZotero())) {
@@ -238,7 +238,7 @@ export class Zotero {
     }
 
     private async checkZotero() {
-        const configuration = vscode.workspace.getConfiguration('latex-utilities.zotero')
+        const configuration = vscode.workspace.getConfiguration('latex-utilities-fork.zotero')
         const zoteroUrl = configuration.get('zoteroUrl') as string
 
         try {

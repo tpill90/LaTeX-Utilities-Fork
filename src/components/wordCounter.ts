@@ -35,7 +35,7 @@ export class WordCounter {
     constructor(extension: Extension) {
         this.extension = extension
         this.status = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, -10002)
-        this.status.command = 'latex-utilities.selectWordcountFormat'
+        this.status.command = 'latex-utilities-fork.selectWordcountFormat'
         this.setStatus()
     }
 
@@ -44,7 +44,7 @@ export class WordCounter {
             this.extension.logger.addLogMessage('A valid file was not give for TexCount')
             return
         }
-        const configuration = vscode.workspace.getConfiguration('latex-utilities.countWord')
+        const configuration = vscode.workspace.getConfiguration('latex-utilities-fork.countWord')
         const args = (configuration.get('args') as string[]).slice()
         const execFile = util.promisify(cp.execFile)
         if (merge) {
@@ -180,7 +180,7 @@ export class WordCounter {
             this.status.hide()
             return
         } else {
-            const template = vscode.workspace.getConfiguration('latex-utilities.countWord').get('format') as string
+            const template = vscode.workspace.getConfiguration('latex-utilities-fork.countWord').get('format') as string
             if (template === '') {
                 this.status.hide()
                 return
@@ -210,7 +210,7 @@ export class WordCounter {
 
         let format = choice
         if (choice === 'custom') {
-            const currentFormat = vscode.workspace.getConfiguration('latex-utilities.countWord').get('format') as string
+            const currentFormat = vscode.workspace.getConfiguration('latex-utilities-fork.countWord').get('format') as string
             format = await vscode.window.showInputBox({
                 placeHolder: 'Template',
                 value: currentFormat,
@@ -232,7 +232,7 @@ export class WordCounter {
 
         if (format !== undefined) {
             vscode.workspace
-                .getConfiguration('latex-utilities.countWord')
+                .getConfiguration('latex-utilities-fork.countWord')
                 .update('format', format, vscode.ConfigurationTarget.Global)
                 .then(() => {
                     setTimeout(() => {

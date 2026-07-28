@@ -17,7 +17,7 @@ export class MacroDefinitions implements vscode.DefinitionProvider {
         _token: vscode.CancellationToken
     ) {
         try {
-            const enabled = vscode.workspace.getConfiguration('latex-utilities.texdef').get('enabled')
+            const enabled = vscode.workspace.getConfiguration('latex-utilities-fork.texdef').get('enabled')
             if (!enabled) {
                 return
             }
@@ -44,7 +44,7 @@ export class MacroDefinitions implements vscode.DefinitionProvider {
             }
 
             checkCommandExists('texdef')
-            const texdefFormat = vscode.workspace.getConfiguration('latex-utilities.texdef').get<string>('tex') ?? 'latex'
+            const texdefFormat = vscode.workspace.getConfiguration('latex-utilities-fork.texdef').get<string>('tex') ?? 'latex'
             const texdefOptions = ['--source', '--Find', '--tex', texdefFormat]
             const packages = this.extension.manager.usedPackages(document)
             if (/\.sty$/.test(document.uri.fsPath)) {

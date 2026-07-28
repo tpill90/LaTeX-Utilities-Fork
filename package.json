@@ -1,15 +1,15 @@
 {
-    "name": "latex-utilities",
-    "displayName": "LaTeX Utilities",
+    "name": "latex-utilities-fork",
+    "displayName": "LaTeX Utilities PR Fix",
     "description": "An add-on to LaTeX Workshop that provides some fancy features that are less vital to the basic experience editing a LaTeX document, but can be rather nice to have.",
     "icon": "icon.png",
-    "version": "0.4.14",
-    "publisher": "tecosaur",
+    "version": "10.9.9",
+    "publisher": "tpill90",
     "license": "MIT",
-    "homepage": "https://github.com/tecosaur/LaTeX-Utilities",
+    "homepage": "https://github.com/tpill90/latex-utilities-fork",
     "repository": {
         "type": "git",
-        "url": "https://github.com/tecosaur/LaTeX-Utilities.git"
+        "url": "https://github.com/tpill90/latex-utilities-fork.git"
     },
     "engines": {
         "vscode": "^1.63.1"
@@ -31,48 +31,48 @@
         "onLanguage:doctex",
         "onLanguage:rsweave",
         "onLanguage:jlweave",
-        "onCommand:latex-utilities.loadPlugin"
+        "onCommand:latex-utilities-fork.loadPlugin"
     ],
     "main": "./out/main.js",
     "contributes": {
         "commands": [
             {
-                "command": "latex-utilities.editLiveSnippetsFile",
+                "command": "latex-utilities-fork.editLiveSnippetsFile",
                 "title": "Edit Live Snippets file",
                 "category": "LaTeX Utilities"
             },
             {
-                "command": "latex-utilities.resetLiveSnippetsFile",
+                "command": "latex-utilities-fork.resetLiveSnippetsFile",
                 "title": "Reset Live Snippets file",
                 "category": "LaTeX Utilities"
             },
             {
-                "command": "latex-utilities.compareLiveSnippetsFile",
+                "command": "latex-utilities-fork.compareLiveSnippetsFile",
                 "title": "Compare user Live Snippets file to default",
                 "category": "LaTeX Utilities"
             },
             {
-                "command": "latex-utilities.formattedPaste",
+                "command": "latex-utilities-fork.formattedPaste",
                 "title": "Paste formatted content",
                 "category": "LaTeX Utilities"
             },
             {
-                "command": "latex-utilities.citeZotero",
+                "command": "latex-utilities-fork.citeZotero",
                 "title": "Cite from Zotero",
                 "category": "LaTeX Utilities"
             },
             {
-                "command": "latex-utilities.openInZotero",
+                "command": "latex-utilities-fork.openInZotero",
                 "title": "Open in Zotero",
                 "category": "LaTeX Utilities"
             },
             {
-                "command": "latex-utilities.selectWordcountFormat",
+                "command": "latex-utilities-fork.selectWordcountFormat",
                 "title": "Select wordcount format",
                 "category": "LaTeX Utilities"
             },
             {
-                "command": "latex-utilities.loadPlugin",
+                "command": "latex-utilities-fork.loadPlugin",
                 "title": "Load the plugin",
                 "category": "LaTeX Utilities"
             }
@@ -81,51 +81,51 @@
             {
                 "key": "ctrl+shift+v",
                 "mac": "cmd+shift+v",
-                "command": "latex-utilities.formattedPaste",
-                "when": "!config.latex-utilities.formattedPaste.useAsDefault && editorTextFocus && editorLangId == 'latex'"
+                "command": "latex-utilities-fork.formattedPaste",
+                "when": "!config.latex-utilities-fork.formattedPaste.useAsDefault && editorTextFocus && editorLangId == 'latex'"
             },
             {
                 "key": "ctrl+v",
                 "mac": "cmd+v",
-                "command": "latex-utilities.formattedPaste",
-                "when": "config.latex-utilities.formattedPaste.useAsDefault && editorTextFocus && editorLangId == 'latex'"
+                "command": "latex-utilities-fork.formattedPaste",
+                "when": "config.latex-utilities-fork.formattedPaste.useAsDefault && editorTextFocus && editorLangId == 'latex'"
             }
         ],
         "configuration": {
             "title": "LaTeX Utils",
             "properties": {
-                "latex-utilities.formattedPaste.tableColumnType": {
+                "latex-utilities-fork.formattedPaste.tableColumnType": {
                     "type": "string",
                     "default": "l",
                     "markdownDescription": "Tabular column type to use, e.g. **`l`**/**`r`**/**`c`**…"
                 },
-                "latex-utilities.formattedPaste.tableBooktabsStyle": {
+                "latex-utilities-fork.formattedPaste.tableBooktabsStyle": {
                     "type": "boolean",
                     "default": true,
                     "markdownDescription": "Use the booktabs commands `\\toprule`, `\\midrule`, and `\\bottomrule`"
                 },
-                "latex-utilities.formattedPaste.tableHeaderRows": {
+                "latex-utilities-fork.formattedPaste.tableHeaderRows": {
                     "type": "integer",
                     "default": 1,
                     "markdownDescription": "Number of header rows to assume. Set to **`0`** to disable."
                 },
-                "latex-utilities.formattedPaste.customTableDelimiter": {
+                "latex-utilities-fork.formattedPaste.customTableDelimiter": {
                     "type": "string",
                     "default": "\t",
                     "minLength": 1,
                     "markdownDescription": "A custom delimiter to try for tables (in addition to `\\t`, `,` and `|` which we always try)"
                 },
-                "latex-utilities.formattedPaste.tableDelimiterPrompt": {
+                "latex-utilities-fork.formattedPaste.tableDelimiterPrompt": {
                     "type": "boolean",
                     "default": false,
                     "markdownDescription": "Whether to be prompted for a custom delimiter if the set table delimiters didn't work"
                 },
-                "latex-utilities.formattedPaste.maxLineLength": {
+                "latex-utilities-fork.formattedPaste.maxLineLength": {
                     "type": "integer",
                     "default": 80,
                     "markdownDescription": "Try to fit within the given line length"
                 },
-                "latex-utilities.formattedPaste.image.template": {
+                "latex-utilities-fork.formattedPaste.image.template": {
                     "type": [
                         "string",
                         "array"
@@ -133,22 +133,22 @@
                     "default": "\\includegraphics{${imageFilePath}}",
                     "markdownDescription": "The template to use for pasting the image (use an array for multiline strings), use `${imageFilePath}` to represent the image file. Can also use `${imageFileNameWithoutExt}`"
                 },
-                "latex-utilities.formattedPaste.imagePathOverride": {
+                "latex-utilities-fork.formattedPaste.imagePathOverride": {
                     "type": "string",
                     "default": "",
                     "markdownDescription": "Override the image path to use for the image template. If empty, the path will be read automatically from the source file. You can use ${currentFileDir} to represent the current source file dir."
                 },
-                "latex-utilities.formattedPaste.useAsDefault": {
+                "latex-utilities-fork.formattedPaste.useAsDefault": {
                     "type": "boolean",
                     "default": false,
                     "markdownDescription": "Make `ctrl`+`v` perform a formatted paste, and `ctrl`+`shift`+`v` perform a 'raw' (normal) paste."
                 },
-                "latex-utilities.liveReformat.enabled": {
+                "latex-utilities-fork.liveReformat.enabled": {
                     "type": "boolean",
                     "default": false,
                     "markdownDescription": "Apply live text replacements to make writing latex maths easier (e.g. `xx` → `\\times`). Also see the command \"Edit Live Snippets File\""
                 },
-                "latex-utilities.liveReformat.languages": {
+                "latex-utilities-fork.liveReformat.languages": {
                     "type": "array",
                     "default": [
                         "tex",
@@ -159,7 +159,7 @@
                     ],
                     "description": "Languages to apply live snippets to"
                 },
-                "latex-utilities.liveReformat.snippets": {
+                "latex-utilities-fork.liveReformat.snippets": {
                     "type": "array",
                     "default": [
                         {
@@ -657,44 +657,44 @@
                             "triggerWhenComplete": true
                         }
                     ],
-                    "markdownDescription": "Live snippets to apply to the document as you type. See [documentation](https://github.com/tecosaur/LaTeX-Utilities/wiki/Live-Snippets) for more details."
+                    "markdownDescription": "Live snippets to apply to the document as you type. See [documentation](https://github.com/tpill90/latex-utilities-fork/wiki/Live-Snippets) for more details."
                 },
-                "latex-utilities.countWord.path": {
+                "latex-utilities-fork.countWord.path": {
                     "type": "string",
                     "default": "texcount",
-                    "markdownDescription": "Define the location of TeXCount executive file/script.\nThis command will be joint with `latex-utilities.countWord.args` and required arguments to form a complete command of TeXCount."
+                    "markdownDescription": "Define the location of TeXCount executive file/script.\nThis command will be joint with `latex-utilities-fork.countWord.args` and required arguments to form a complete command of TeXCount."
                 },
-                "latex-utilities.countWord.docker.enabled": {
+                "latex-utilities-fork.countWord.docker.enabled": {
                     "type": "boolean",
                     "default": false,
                     "markdownDescription": "Use Docker to run TeXCount. This requires Docker to be installed and running. We will use docker config from LaTeX-Workshop."
                 },
-                "latex-utilities.countWord.args": {
+                "latex-utilities-fork.countWord.args": {
                     "type": "array",
-                    "default": [],
+                    "default": [ ],
                     "markdownDescription": "TeXCount arguments to count words in LaTeX document of the entire project from the root file, or the current document.\nArguments must be in separate strings in the array. Additional arguments, i.e., `-merge %DOC%` for the project and the current document path for counting current file will be appended when constructing the command."
                 },
-                "latex-utilities.countWord.format": {
+                "latex-utilities-fork.countWord.format": {
                     "type": "string",
                     "default": "${words} Words",
                     "markdownDescription": "Format of the statusbar item. Set empty (`\"\"`) to disable."
                 },
-                "latex-utilities.message.update.show": {
+                "latex-utilities-fork.message.update.show": {
                     "type": "boolean",
                     "default": "true",
                     "markdownDescription": "Notify you when the extension updates"
                 },
-                "latex-utilities.message.error.show": {
+                "latex-utilities-fork.message.error.show": {
                     "type": "boolean",
                     "default": "true",
                     "markdownDescription": "Show error messages"
                 },
-                "latex-utilities.texdef.enabled": {
+                "latex-utilities-fork.texdef.enabled": {
                     "type": "boolean",
                     "default": "true",
                     "markdownDescription": "Use `texdef` to find definitions for LaTeX macros"
                 },
-                "latex-utilities.texdef.tex": {
+                "latex-utilities-fork.texdef.tex": {
                     "type": "string",
                     "default": "latex",
                     "enum": [
@@ -707,17 +707,17 @@
                     ],
                     "markdownDescription": "Sets the `--tex <format>` option of the `texdef` command. This determines the TeX format used when resolving LaTeX macro definitions."
                 },
-                "latex-utilities.zotero.zoteroUrl": {
+                "latex-utilities-fork.zotero.zoteroUrl": {
                     "type": "string",
                     "default": "http://localhost:23119",
                     "markdownDescription": "URL for the Zotero HTTP server"
                 },
-                "latex-utilities.zotero.latexCommand": {
+                "latex-utilities-fork.zotero.latexCommand": {
                     "type": "string",
                     "default": "autocite",
                     "markdownDescription": "LaTeX citation command to use (`cite`, `parencite`, `autocite`, etc.)"
                 },
-                "latex-utilities.zotero.citeMethod": {
+                "latex-utilities-fork.zotero.citeMethod": {
                     "type": "string",
                     "enum": [
                         "zotero",
@@ -771,27 +771,5 @@
         "latex-utensils": "^4.1.0",
         "tmp": "^0.2.1",
         "vscode-extension-telemetry": "^0.1.2"
-    },
-    "badges": [
-        {
-            "url": "https://vsmarketplacebadges.dev/version-short/tecosaur.latex-utilities.svg?style=flat-square&color=579983&logo=visual-studio-code&logoColor=C6EDE2",
-            "href": "https://marketplace.visualstudio.com/items?itemName=tecosaur.latex-utilities&",
-            "description": "VSCode Marketplace"
-        },
-        {
-            "url": "https://vsmarketplacebadges.dev/downloads-short/tecosaur.latex-utilities.svg?style=flat-square&color=579983",
-            "href": "https://vsmarketplacebadges.dev/downloads-short/tecosaur.latex-utilities.svg",
-            "description": "version"
-        },
-        {
-            "url": "https://vsmarketplacebadges.dev/installs-short/tecosaur.latex-utilities.svg?style=flat-square&color=579983",
-            "href": "https://marketplace.visualstudio.com/items?itemName=tecosaur.latex-utilities&",
-            "description": "installs"
-        },
-        {
-            "url": "https://vsmarketplacebadges.dev/rating-short/tecosaur.latex-utilities.svg?style=flat-square&color=579983",
-            "href": "https://marketplace.visualstudio.com/items?itemName=tecosaur.latex-utilities&",
-            "description": "rating"
-        }
-    ]
+    }
 }
